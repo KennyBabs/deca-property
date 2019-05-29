@@ -1,0 +1,28 @@
+{
+  "users":[
+      {
+          "id": "1",
+          "first_name": "Kenny",
+          "last_name": "babson",
+          "email": "kennybabson@gmail.com",
+          "password": "roughedges",
+          "propertyId":[{
+              "id": "1",
+              "type": "Duplex"
+          }]
+      }
+  ],
+  "property":[
+      {
+          "id": "1",
+          "type": "Duplex",
+          "address":{
+              "street": "2 akoka, bariga",
+              "city": "lagos"
+          },
+          "photos": "",
+          "description": "4 BedRoom Duplex Corner piece Carcass",
+          "price": "20,000,00"
+      }
+  ]
+}

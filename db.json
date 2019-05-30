@@ -1,28 +1,51 @@
 {
-  "users":[
-      {
+  "users": [
+    {
+      "id": 1,
+      "first_name": "Kenny",
+      "last_name": "babson",
+      "email": "kennybabson@gmail.com",
+      "password": "roughedges",
+      "propertyId": [
+        {
           "id": "1",
-          "first_name": "Kenny",
-          "last_name": "babson",
-          "email": "kennybabson@gmail.com",
-          "password": "roughedges",
-          "propertyId":[{
-              "id": "1",
-              "type": "Duplex"
-          }]
-      }
+          "type": "Duplex"
+        }
+      ]
+    },
+    {
+      "first_name": "henry",
+      "last_name": "terry",
+      "email": "ghege@yahoo.com",
+      "password": "1234",
+      "id": "uHT5d5h"
+    },
+    {
+      "first_name": "henry",
+      "last_name": "terry",
+      "email": "ghege@yahoo.com",
+      "password": "1234",
+      "id": "vaJYZGp"
+    },
+    {
+      "first_name": "henry",
+      "last_name": "terry",
+      "email": "ghege@yahoo.com",
+      "password": "1234",
+      "id": 2
+    }
   ],
-  "property":[
-      {
-          "id": "1",
-          "type": "Duplex",
-          "address":{
-              "street": "2 akoka, bariga",
-              "city": "lagos"
-          },
-          "photos": "",
-          "description": "4 BedRoom Duplex Corner piece Carcass",
-          "price": "20,000,00"
-      }
+  "property": [
+    {
+      "id": "1",
+      "type": "Duplex",
+      "address": {
+        "street": "2 akoka, bariga",
+        "city": "lagos"
+      },
+      "photos": "",
+      "description": "4 BedRoom Duplex Corner piece Carcass",
+      "price": "20,000,00"
+    }
   ]
 }

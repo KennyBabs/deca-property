@@ -4,7 +4,7 @@
   "description": "An online property rental system that helps with the ease of renting an apartment.",
   "main": "index.js",
   "scripts": {
-    "start": "json-server --watch db.json", 
+    "start": "json-server --watch db.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/KennyBabs/deca-property/issues"
   },
-  "homepage": "https://github.com/KennyBabs/deca-property#readme"
+  "homepage": "https://github.com/KennyBabs/deca-property#readme",
+  "dependencies": {
+    "sweetalert2": "^8.11.6"
+  }
 }

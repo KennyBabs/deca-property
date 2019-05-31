@@ -80,7 +80,11 @@ $(document).ready(function(){
                 encode       :   true
         })
         .done(function(data){
-            alert("hurray!, you can now sign in");
+            Swal.fire({
+                type: "success",
+                title: "Hurray!",
+                text: "You can now Login"
+              });
             window.location.replace('index.html') 
         });
       
@@ -102,11 +106,21 @@ $('.login').submit(function(e){
         let user = data.find(
             user => user.email === email && user.password === password);
             if(user){
-                alert("Welcome back!");
+
+                Swal.fire({
+                    type: "success",
+                    title: "Login successfully",
+                    text: "Welcome back!"
+                  });
                 window.location.replace("dashboard/dashboard.html");
 
             }else{
-                alert("You have to sign-up")
+
+                Swal.fire({
+                    type: "error",
+                    title: "Oops...",
+                    text: "You have to sign up"
+                  });
             }
     })
     })

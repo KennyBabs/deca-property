@@ -21,16 +21,30 @@ header h1 {
     text-align: center;
     color: white;
     text-shadow: 2px 2px 4px #000000;
-    font-size: 50px;
-    padding-top: 30px;
+    font-size: 30px;
+    padding-top: 20px;
+    /* margin-left: 100px;  */
 }
 
 nav {
     /* background-image: url("media/gtd_logo.png");
     background-repeat: no-repeat; */
-    background-color: #4F4D53;
+    /* background-color: #4F4D53; */
     /* background-position: 320px;  */
     height: 50px;
+    padding-left: 10px; ;
+}
+
+.nav-logo{
+    text-shadow: 2px 2px 4px #000000;
+    color: white;
+    font-weight: 1000;
+    font-size: 1.8rem;
+    display: inline;
+}
+
+.nav-lg{
+  color: #eb3b5a;
 }
 
 .post-prop {

@@ -76,6 +76,20 @@
       "email": "jenks@gmail.com",
       "password": "1234",
       "id": 9
+    },
+    {
+      "first_name": "henry",
+      "last_name": "bode",
+      "email": "bode@gmail.com",
+      "password": "hgfdsa",
+      "id": 10
+    },
+    {
+      "first_name": "neyi",
+      "last_name": "herb",
+      "email": "gher@fssf.com",
+      "password": "frcbnhtf",
+      "id": 11
     }
   ],
   "property": [

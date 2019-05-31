@@ -1,5 +1,6 @@
 $(document).ready(function(){
   $('.post-p').click(postAproperty);
+  $('.post-p').click(postAproperty);
   $('.add-prop').click(function(){
     $('.frm-content').show();
     $('section').hide();
@@ -29,7 +30,33 @@ $(document).ready(function(){
         }
     });
   }
-  
 
-    
+  // Post A Property
+  function postAproperty(){
+         
+    let type        = $('select.type-prop').children('option:selected').val();
+    let address     = $('input[name=address]').val();
+    let photos      = $('input[name=photos]').val();
+    let price       = $('select.price-range').children('option:selected').val();
+    let description = $('textarea#message').val();
+
+let formData = JSON.stringify({type, address,photos,price,description});
+
+ $.ajax({
+     type : 'POST',
+     url  : "http://localhost:3000/property",
+     data :  formData,
+     dataType: 'json',
+     contentType: 'application/json',
+     success : function(data){
+         $('.view-prop').show();
+         viewOneProperty(data.id);
+         console.log("Post Successfully");
+     },
+     error:function(){
+         console.log("error");
+     }
+ })
+}  
+      
 })

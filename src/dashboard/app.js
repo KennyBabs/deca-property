@@ -1,6 +1,10 @@
 $(document).ready(function(){
+  $(".view-prop-btn").click(viewAllProperties);
   $('.post-p').click(postAproperty);
-  $('.post-p').click(postAproperty);
+  $(".view-prop").on("click",".deletePost",null,function(){
+    var id = $(this).attr("id");
+    deleteProperty(id);
+});
   $('.add-prop').click(function(){
     $('.frm-content').show();
     $('section').hide();
@@ -58,5 +62,22 @@ let formData = JSON.stringify({type, address,photos,price,description});
      }
  })
 }  
-      
+//  Delete A Property
+function deleteProperty(id){
+  console.log("id",id);
+  $.ajax(
+    {
+       type:'DELETE',
+       url: 'http://localhost:3000/property/'+id,
+       success:function(data){
+         viewAllProperties();
+         alert("Deleted succesfully");
+       },
+       error:function(){
+          console.log("error");
+       }
+    }
+  );
+}
+
 })

@@ -81,7 +81,7 @@ $(document).ready(function(){
         })
         .done(function(data){
             console.log(data);
-            window.location.replace("dashboard.html");
+            
         
         });
       
@@ -104,6 +104,7 @@ $('.login').submit(function(e){
             user => user.email === email && user.password === password);
             if(user){
                 alert("Welcome back!");
+                window.location.replace("dashboard.html");
 
             }else{
                 alert("You have to sign-up")

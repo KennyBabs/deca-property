@@ -11,6 +11,11 @@ $(document).ready(function(){
     $('.view-prop').hide();
 });
 
+$(".view-prop").on("click",".getOneProp",null,function(){
+  var id = $(this).attr("id");
+  viewOneProperty(id);
+});
+
   function viewAllProperties(){
   
     $.ajax({
@@ -72,6 +77,26 @@ function deleteProperty(id){
        success:function(data){
          viewAllProperties();
          alert("Deleted succesfully");
+       },
+       error:function(){
+          console.log("error");
+       }
+    }
+  );
+}
+
+//  Get one Property
+function viewOneProperty(id){
+  console.log("id",id);
+  $.ajax(
+    {
+       type:'GET',
+       url: 'http://localhost:3000/property/'+id,
+       success:function(data){
+           $('.frm-content').hide();
+          $(".view-prop").empty();
+          $(".view-prop").append("<div class='card'><img src="+data.photos +" alt='property image' class='image'><div class='container'><h4><b>"+data.type+"</b></h4><p>Location: "+data.address+"</p><p>"+data.description+"</p><p>Price: "+data.price+"</p><button class='deletePost'>Close</button>");
+         console.log("succesfully");
        },
        error:function(){
           console.log("error");

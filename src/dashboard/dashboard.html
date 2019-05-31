@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="dashboard.css">
 <title>Deca-Property</title>
 </head>
 <body>
@@ -14,5 +15,39 @@
         </nav>
         <h1>Hello, welcome to Deca-Property.</h1>
     </header>
+    <section>
+            <h2>About Us</h2>
+            <p>Deca-Property is an online rental system, where the ease of getting you a well condusive and safe abode is rest asure. We are one of a kind in real estate and our custormer satisfaction is the topmost goal of our idealogy.
+            </p>
+            <div class="image">  
+                <img src="../img/duplex1.jpg" alt="duplex" />
+                <img src="../img/2bedroom.jpg" alt="2 Bedroom" />
+                <img src="../img/4bedroom.jpg" alt="4 Bedroom" />
+            </div>
+        </section>
+        <div id="app" class="view-prop">            
+        </div>
+        <div class="frm-content">
+          <p>Post A Property</p>
+            <hr class="line">
+           <div>
+            <select class="type-prop">
+                <option selected disabled>Type</option>
+                <option>Duplex</option>
+                <option>2 Bedroom</option>
+                <option>3 Bedroom</option>
+            </select>
+            <input type="text" placeholder="Address" name="address" required>
+            <input type="text" placeholder="photo url" name="photos" required>
+            <select class="price-range">
+                <option selected disabled>Price Range</option>
+                <option>1,000,000</option>
+                <option>2,000,000</option>
+                <option>3,000,000</option>
+            </select>
+            <textarea name="desc" class="textdesc" id="message" rows="4" cols="50" placeholder="property description"></textarea>
+            <button type="submit" class="post-p">Post</button></br>
+        </div>
+        </div>
 </body>
 </html> 

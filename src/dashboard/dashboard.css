@@ -116,6 +116,8 @@ section p {
 
 .view-prop {
     display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
     justify-content: center;
 }
 
@@ -132,21 +134,25 @@ section p {
   .container {
     padding: 2px 16px;
   }
+  .col{
+    color:blue;
+    font-size: 20px;
+  }
 
   img {
       width: 100%;
   }
 
-  .deletePost, .getOneProp {
+  .deletePost, .getOneProp, .closePost {
     width: 25%;
     text-align: center;
-    background-color:#eb3b5a;
+    background-color:#e42c4e;
     color: white;
-    padding: 3px;
+    padding: 1px;
     border: 5px solid #eb3b5a;
     border-radius: 3.5px;
     cursor: pointer;
-    font-size: 1.35rem;
+    font-size: 1.2rem;
     margin: 2px;
 
   }

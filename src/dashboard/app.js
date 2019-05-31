@@ -1,6 +1,10 @@
 $(document).ready(function(){
   $(".view-prop-btn").click(viewAllProperties);
   $('.post-p').click(postAproperty);
+  $('.closePost').click(function(){
+    $(this).hide();
+    // $('.view-prop').show();
+  })
   $(".view-prop").on("click",".deletePost",null,function(){
     var id = $(this).attr("id");
     deleteProperty(id);
@@ -27,7 +31,7 @@ $(".view-prop").on("click",".getOneProp",null,function(){
         $(".view-prop").empty();
         for(var i = 0; i < data.length; i++){
           console.log("data",data);
-          $(".view-prop").append("<div class='card'><img src="+data[i].photos +" alt='property image' class='image'><div class='container'><h4><b>"+data[i].type+"</b></h4><p>Location: "+data[i].address+"</p><p>"+data[i].description+"</p><p>Price: "+data[i].price+"</p><button id="+data[i].id+" class='deletePost'>Delete</button><button id="+data[i].id+" class='getOneProp'>Details</button>");
+          $(".view-prop").append("<div class='card'><img src="+data[i].photos +" alt='property image' class='image'><div class='container'><h4><b>"+data[i].type+"</b></h4><p>Location: "+data[i].address+"</p><p>"+data[i].description+"</p><p class='col'>Price:"+data[i].price+" NG</p><button id="+data[i].id+" class='deletePost'>Delete</button><button id="+data[i].id+" class='getOneProp'>Details</button>");
           $(".view-prop").append("");
           $(".view-prop").append("");
           $("section").hide();
@@ -95,7 +99,7 @@ function viewOneProperty(id){
        success:function(data){
            $('.frm-content').hide();
           $(".view-prop").empty();
-          $(".view-prop").append("<div class='card'><img src="+data.photos +" alt='property image' class='image'><div class='container'><h4><b>"+data.type+"</b></h4><p>Location: "+data.address+"</p><p>"+data.description+"</p><p>Price: "+data.price+"</p><button class='deletePost'>Close</button>");
+          $(".view-prop").append("<div class='card'><img src="+data.photos +" alt='property image' class='image'><div class='container'><h4><b>"+data.type+"</b></h4><p>Location: "+data.address+"</p><p>"+data.description+"</p><p class='col'>Price: "+data.price+" NG</p><button class='closePost'>Close</button>");
          console.log("succesfully");
        },
        error:function(){

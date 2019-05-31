@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
     $('.form').find('input').on('keyup blur focus', function (e) {
   
         var $this = $(this),
@@ -31,8 +30,6 @@ $(document).ready(function(){
       
       $('.tab a').on('click', function (e) {
         
-        e.preventDefault();
-        
         $(this).parent().addClass('active');
         $(this).parent().siblings().removeClass('active');
         
@@ -41,30 +38,53 @@ $(document).ready(function(){
         $('.tab-content > div').not(target).hide();
         
         $(target).fadeIn(600);
-        
-      });
-
-      $('form').submit(function(e){
 
         e.preventDefault();
-        let formData = {
-            "first_name"  : $('input[name=first_name]').val(),
-            "last_name"   : $('input[name=last_name]').val(),
-            "email"       : $('input[name=email]').val(),
-            "password"    : $('input[name=password]').val()
-        };
+        
+      });
+     
 
-        $.ajax({
-            type         :  'POST',
-            url          :  'http://localhost:3000/users',
-            contentType  :   "application/json",
-            data         :   formData,
-            dataType     :   'json',
-            encode       :   true
+      $('.signup').submit(function(e){
+        e.preventDefault();
+        
+            let first_name = $('input[name=first_name]').val();
+            let last_name  = $('input[name=last_name]').val();
+            let email      = $('input[name=email]').val();
+            let password   = $('input[name=password]').val();
+
+            let formData = JSON.stringify({first_name, last_name, email, password});
+        
+
+        if (!first_name.match(/^[A-Z]+$/i)) {
+
+            Swal.fire({
+              type: "error",
+              title: "Oops...",
+              text: "First name should be alphabets only"
+            });
+
+          } else if (!last_name.match(/^[A-Z]+$/i)) {
+            Swal.fire({
+              type: "error",
+              title: "Oops...",
+              text: "Last name should be alphabets only"
+            });
+
+          }else {
+            $.ajax({
+                type         :  'POST',
+                url          :  'http://localhost:3000/users',
+                contentType  :   "application/json",
+                data         :   formData,
+                dataType     :   'json',
+                encode       :   true
         })
         .done(function(data){
             console.log(data);
+            window.location.replace("dashboard.html");
+        
         });
-
-      });
-});
+      
+    }
+})
+})

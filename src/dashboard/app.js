@@ -1,5 +1,10 @@
 $(document).ready(function(){
-  $(".view-prop-btn").click(viewAllProperties);
+  $('.post-p').click(postAproperty);
+  $('.add-prop').click(function(){
+    $('.frm-content').show();
+    $('section').hide();
+    $('.view-prop').hide();
+});
 
   function viewAllProperties(){
   
@@ -24,5 +29,7 @@ $(document).ready(function(){
         }
     });
   }
+  
+
     
 })

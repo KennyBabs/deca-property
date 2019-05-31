@@ -87,4 +87,28 @@ $(document).ready(function(){
       
     }
 })
+
+// User login
+
+$('.login').submit(function(e){
+    e.preventDefault();
+    let email = $('input[name=emal]').val();
+    let password = $('input[name=passwrd]').val();
+
+    $.ajax({
+        method: 'GET',
+        url: 'http://localhost:3000/users',
+        dataType: "json"
+    }).done(function(data){
+        let user = data.find(
+            user => user.email === email && user.password === password);
+            if(user){
+                alert("Welcome back!");
+
+            }else{
+                alert("You have to sign-up")
+            }
+    })
+    })
+
 })

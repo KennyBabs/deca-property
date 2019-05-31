@@ -5,13 +5,7 @@
       "first_name": "Kenny",
       "last_name": "babson",
       "email": "kennybabson@gmail.com",
-      "password": "roughedges",
-      "propertyId": [
-        {
-          "id": "1",
-          "type": "Duplex"
-        }
-      ]
+      "password": "roughedges"
     },
     {
       "first_name": "henry",
@@ -33,19 +27,89 @@
       "email": "ghege@yahoo.com",
       "password": "1234",
       "id": 2
+    },
+    {
+      "first_name": "ayo",
+      "last_name": "hedge",
+      "email": "ayo@yahoo.com",
+      "password": "54321",
+      "id": 3
+    },
+    {
+      "first_name": "ayo",
+      "last_name": "hedge",
+      "email": "ayo@yahoo.com",
+      "password": "54321",
+      "id": 4
+    },
+    {
+      "first_name": "ayo",
+      "last_name": "hedge",
+      "email": "ayo@yahoo.com",
+      "password": "54321",
+      "id": 5
+    },
+    {
+      "first_name": "gbenga",
+      "last_name": "osu",
+      "email": "osu@gmail.com",
+      "password": "12345",
+      "id": 6
+    },
+    {
+      "first_name": "gbenga",
+      "last_name": "osu",
+      "email": "osu@gmail.com",
+      "password": "12345",
+      "id": 7
+    },
+    {
+      "first_name": "gbenga",
+      "last_name": "osu",
+      "email": "osu@gmail.com",
+      "password": "12345",
+      "id": 8
+    },
+    {
+      "first_name": "hend",
+      "last_name": "jenk",
+      "email": "jenks@gmail.com",
+      "password": "1234",
+      "id": 9
     }
   ],
   "property": [
     {
-      "id": "1",
+      "id": 1,
       "type": "Duplex",
-      "address": {
-        "street": "2 akoka, bariga",
-        "city": "lagos"
-      },
-      "photos": "",
-      "description": "4 BedRoom Duplex Corner piece Carcass",
-      "price": "20,000,00"
+      "address": "2 akoka, bariga, lagos.",
+      "photos": "../img/2bedroom.jpg",
+      "description": "2 BedRoom Duplex Corner piece Carcass",
+      "price": "20,000,000"
+    },
+    {
+      "type": "4 Bedroom",
+      "address": "jakande, estate, lagos.",
+      "photos": "../img/4bedroom.jpg",
+      "price": "2,000,000",
+      "description": "nice and calm environ",
+      "id": "4eVuE7S"
+    },
+    {
+      "type": "Duplex",
+      "address": "jakande, estate, lagos.",
+      "photos": "../img/duplex1.jpg",
+      "price": "2,000,000",
+      "description": "nice and calm environ",
+      "id": "hUMf98M"
+    },
+    {
+      "type": "3 Bedroom",
+      "address": "jakande, estate, lagos.",
+      "photos": "../img/3.jpg",
+      "price": "2,000,000",
+      "description": "nice and calm environ",
+      "id": "ubLcxXC"
     }
   ]
 }

@@ -80,9 +80,8 @@ $(document).ready(function(){
                 encode       :   true
         })
         .done(function(data){
-            console.log(data);
-            
-        
+            alert("hurray!, you can now sign in");
+            window.location.replace('index.html') 
         });
       
     }
@@ -104,7 +103,7 @@ $('.login').submit(function(e){
             user => user.email === email && user.password === password);
             if(user){
                 alert("Welcome back!");
-                window.location.replace("dashboard.html");
+                window.location.replace("dashboard/dashboard.html");
 
             }else{
                 alert("You have to sign-up")

@@ -4,11 +4,11 @@
 * An online property rental system that helps with the ease of renting an apartment.
 
 ### Features
-User can create property listing.
-User can view all properties.
-User can update a property details.
-User can delete a propert.
-User can view one single property.
+** User can create property listing.
+** User can view all properties.
+** User can update a property details.
+** User can delete a propert.
+** User can view one single property.
 
 ## Technology Used
 * Jquery(a javascript library)

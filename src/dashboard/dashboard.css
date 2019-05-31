@@ -13,7 +13,7 @@
     background-image: url('../img/3.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 400px;
+    height: 200px;
 }
 
 header h1 {
@@ -21,29 +21,56 @@ header h1 {
     text-align: center;
     color: white;
     text-shadow: 2px 2px 4px #000000;
-    font-size: 50px;
-    padding-top: 30px;
+    font-size: 30px;
+    padding-top: 20px;
+    /* margin-left: 100px;  */
 }
 
 nav {
     /* background-image: url("media/gtd_logo.png");
     background-repeat: no-repeat; */
-    background-color: #4F4D53;
+    /* background-color: #4F4D53; */
     /* background-position: 320px;  */
     height: 50px;
+    padding-left: 10px; ;
+}
+
+.nav-logo{
+    text-shadow: 2px 2px 4px #000000;
+    color: white;
+    font-weight: 1000;
+    font-size: 1.8rem;
+    display: inline;
+}
+
+.nav-lg{
+  color: #eb3b5a;
 }
 
 .post-prop {
     border: 1px solid white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 3.5px;
     background-color: white;
     padding: 10px;
     float: right;
     margin: 5px;
     text-decoration: none;
+    text-shadow: 1px 1px 1px #53A5E1;
+    font-weight: 500;
+    font-size: 1rem;
+
 }
 
 .post-prop:hover{
-    background-color: yellow;
+    background-color: #283044;
+    color: white;
+}
+.post-prop a{
+  text-decoration: none;
+}
+.post-prop a:hover{
+  color: white;
 }
 
 
@@ -77,26 +104,41 @@ section p {
 }
 
 .frm-content {
+    display: flex;
+    justify-content: center;
     color: white;
     background-color: #485460;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
-    border-top: 5px solid rgb(247, 195, 51);
+    border-top: 5px solid rgb(14, 100, 180);
     padding: 0.9375rem;
     text-align: center;
-    margin-bottom: 1.25rem;
+    /* margin-bottom: 1.25rem;
+    margin-top: 5px; */
+    width: 50%;
+    margin: 5px auto ;
     display: none;
   }
 
+  .frm-content p{
+  text-shadow: 2px 2px 4px #000000;
+  color: white;
+  font-weight: 1000;
+  font-size: 1.6rem;
+}
+
+
 .view-prop {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
 }
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     width: 30%;
-    margin-top: 20px;
+    margin: 20px;
 }
 
 .card:hover {
@@ -106,21 +148,25 @@ section p {
   .container {
     padding: 2px 16px;
   }
+  .col{
+    color:blue;
+    font-size: 20px;
+  }
 
   img {
       width: 100%;
   }
 
-  .deletePost, .getOneProp {
+  .deletePost, .getOneProp, .closePost {
     width: 25%;
     text-align: center;
-    background-color:#eb3b5a;
+    background-color:#e42c4e;
     color: white;
-    padding: 3px;
+    padding: 1px;
     border: 5px solid #eb3b5a;
     border-radius: 3.5px;
     cursor: pointer;
-    font-size: 1.35rem;
+    font-size: 1.2rem;
     margin: 2px;
 
   }
@@ -140,7 +186,7 @@ section p {
   }
 
 input[type=text]{
-  width: 50%;
+  width: 35%;
   text-align: center;
   padding: 10px;
   margin: 5px;
@@ -148,6 +194,12 @@ input[type=text]{
   background: #303952;
   color: white;
   border: 1px solid #2C3A47;
+}
+
+::placeholder {
+  color: #d2dae2;
+  opacity: 1; 
+  text-align: center;
 }
 
 .post-p{
@@ -168,4 +220,11 @@ input[type=text]{
 
 .post-p:focus{
     box-shadow: 0 1rem 2rem rgba(0,0,0, 0.6);
+}
+.type-prop, .price-range{
+  border: 2px solid black;
+  border-radius: 2.5px;
+  cursor: pointer;
+  padding: 10px;
+  outline:none;
 }
